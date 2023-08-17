@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+            <div class="logo">Gundam</div>
+            
+            <nav class="navbar">
+            <ul>
+                <li><a href="" class="active">Home</a></li>
+                <li><a href="">Features</a></li>
+                <li><a href="">Pricing</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="shopping">
+            <i class="fa-solid fa-cart-shopping" style="font-size: 30px;" ></i>
+            <span class="quantity">0</span>
+        </div>
+        </header>
+
+        <div class="list"></div>
+    </div>
+    <div class="card">
+        <div class="goBack">
+            <h1>Card</h1>
+            <button class="closeCardButton">
+                <i class="fa-solid fa-xmark" id="Close-cart"></i>
+            </button>
+        </div>
+        <ul class="listCard">
+        </ul>
+        <div class="discount"></div>
+        <div class="checkOut">
+    <div class="total">ราคารวมทั้งหมด: 0</div>
+    <button class="buy" id="buyButton">สั่งซื้อสินค้า</button>
+</div>
+<input type="hidden" id="orderData" name="orderData" value="">
+    </div>
+
+    <div class="popup-container" id="popupContainer">
+        <div class="popup">
+            <h2>กรอกข้อมูลการสั่งซื้อ</h2>
+            <form id="orderForm">
+                <label for="name">ชื่อผู้สั่งซื้อ:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="address">ที่อยู่:</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+    
+                <label for="payment">วิธีการชำระเงิน:</label>
+                <select id="payment" name="payment" required>
+                    <option value="credit">บัตรเครดิต</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="cash">เงินสด</option>
+                </select>
+                <button type="submit">ยืนยันการสั่งซื้อ</button>
+            </form>
+            <button class="close-popup" id="closePopup">ปิด</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
